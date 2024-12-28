@@ -72,7 +72,7 @@ async function verifyBook(id) {
 //Delete book
 async function deleteBook(id) {
     if (confirm('Are you sure to Delete...?')){
-        await fetch(`${baseURL}/${id}`{
+        await fetch(`${baseURL}/${id}`,{
             method:'DELETE'
         });
     }
