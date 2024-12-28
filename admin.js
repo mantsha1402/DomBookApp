@@ -12,15 +12,15 @@ document.getElementById('addBookForm').addEventListener('submit', async (e)=> {
     
     const title=document.getElementById('title').value;
     const author=document.getElementById('author').value;
-    const category=document.getElementById(category).value;
+    const category=document.getElementById('category').value;
 
     const newBook={
         title,
         author,
         category,
-        isAvailable:true;
-        isVerified:false;
-        borrowedDays:null;
+        isAvailable:true,
+        isVerified:false,
+        borrowedDays:null,
         imageUrl:'https://m.media-amazon.com/images/I/71ZB18P3inL._SY522_.jpg',
 
     };
@@ -43,7 +43,7 @@ async function loadBooks() {
     const booksGrid=document.getElementById('booksGrid');
     booksGrid.innerHTML='';
 
-    books.forEach(book) => {
+    books.forEach((book) => {
         const bookCard=document.createElement('div');
         bookCard.innerHTML=`
         <h3>${book.title}</h3>
